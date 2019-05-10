@@ -13,4 +13,10 @@
     <string name="menu_settings">Settings</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+
+    <string name="en_upload">Upload</string>
+    <string name="bn_upload">আপলোড</string>
+
+    <string name="en_tv_detect">Detect</string>
+    <string name="bn_tv_detect">সনাক্ত করুন</string>
 </resources>
