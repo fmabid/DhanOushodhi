@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#6B6B6B"
+        android:weightSum="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            android:layout_weight=".5"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:id="@+id/lout_upload"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingVertical="5dp"
+                android:layout_marginRight=".2dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_above="@+id/tv_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/ic_cloud_upload_lightblue_24dp"/>
+
+                <TextView
+                    android:id="@+id/tv_upload"
+                    android:text="@string/bn_upload"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/lout_detect"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingVertical="5dp"
+                android:background="@color/colorWhite"
+                android:layout_marginLeft=".2dp"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:layout_above="@+id/tv_detect"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/ic_search_lightblue_24dp"/>
+
+                <TextView
+                    android:id="@+id/tv_detect"
+                    android:text="@string/bn_tv_detect"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

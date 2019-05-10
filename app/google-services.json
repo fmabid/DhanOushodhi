@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "537858136000",
+    "firebase_url": "https://dhanoushodhi.firebaseio.com",
+    "project_id": "dhanoushodhi",
+    "storage_bucket": "dhanoushodhi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537858136000:android:a7dbc014b4dc18e1",
+        "android_client_info": {
+          "package_name": "com.example.dhanoushodhi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537858136000-ivpij5slg04s0l32jf4s0cb62hem9s3v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dhanoushodhi",
+            "certificate_hash": "44e70583bdd3074a3096b8118686c3a88ad79d87"
+          }
+        },
+        {
+          "client_id": "537858136000-jsken5ofovrn597ngjau2uudfqiludnf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZhutLPZwxR8U7ioTt8AifQXeCyS47CKM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537858136000-jsken5ofovrn597ngjau2uudfqiludnf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
