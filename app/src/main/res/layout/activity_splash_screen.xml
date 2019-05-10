@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/colorPrimary"
+    tools:context=".SplashScreenActivity">
+
+    <!--<LinearLayout
+        android:id="@+id/container_logo"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ss">
+
+        <ImageView
+            android:src="@drawable/logotwo"
+            android:background="@drawable/image_frame"
+            android:padding="10dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="24sp"
+            android:padding="4dp"
+            android:textColor="@color/colorWhite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:text="Version 1.0.2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ss"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Developed by"
+            android:textColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="ITmedicus"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorWhite"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:text="Sponsored by"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:textSize="18dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="Incepta Pharmaceuticals Ltd"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@color/colorWhite"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>-->
+
+</RelativeLayout>
