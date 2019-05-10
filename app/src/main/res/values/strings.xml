@@ -19,4 +19,5 @@
 
     <string name="en_tv_detect">Detect</string>
     <string name="bn_tv_detect">সনাক্ত করুন</string>
+    <string name="title_activity_upload">UploadActivity</string>
 </resources>
