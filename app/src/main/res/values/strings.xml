@@ -19,5 +19,18 @@
 
     <string name="en_tv_detect">Detect</string>
     <string name="bn_tv_detect">সনাক্ত করুন</string>
+
     <string name="title_activity_upload">UploadActivity</string>
+
+    <string name="en_disease">Disease</string>
+    <string name="bn_disease">রোগ</string>
+
+    <string name="en_nutrition_def">Nutrition Deficiency</string>
+    <string name="bn_nutrition_def">পুষ্টি দুর্বলতা</string>
+
+    <string name="en_pests">Pests</string>
+    <string name="bn_pests">কীট</string>
+
+    <string name="en_unknown">Unknown Disease</string>
+    <string name="bn_unknown">অজানা রোগ</string>
 </resources>
