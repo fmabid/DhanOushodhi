@@ -16,8 +16,7 @@ public class UploadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_upload);
 
         toolbar = findViewById(R.id.toolbar);
-
+        toolbar.setTitle("তালিকা");
         setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("তালিকা");
     }
 }
