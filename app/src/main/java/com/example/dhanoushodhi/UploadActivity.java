@@ -8,16 +8,10 @@ import java.util.Objects;
 
 public class UploadActivity extends AppCompatActivity {
 
-    Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload);
 
-        toolbar = findViewById(R.id.toolbar);
-
-        setSupportActionBar(toolbar);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("তালিকা");
     }
 }
