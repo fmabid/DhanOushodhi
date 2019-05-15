@@ -6,7 +6,7 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    
+
 
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
@@ -32,6 +32,12 @@
     <string name="en_pests">Pests</string>
     <string name="bn_pests">কীট</string>
 
-    <string name="en_unknown">Unknown Disease</string>
-    <string name="bn_unknown">অজানা রোগ</string>
+    <string name="en_unknown_disease">Unknown Disease</string>
+    <string name="bn_unknown_disease">অজানা রোগ</string>
+
+    <string name="en_unknown_nutrition">Unknown Nutrition Deficiency</string>
+    <string name="bn_unknown_nutrition">অজানা পুষ্টি দুর্বলতা</string>
+
+    <string name="en_unknown_pest">Unknown Pest</string>
+    <string name="bn_unknown_pest">অজানা কীট</string>
 </resources>

@@ -28,7 +28,7 @@ public class HomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_home);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitle("মূলপাতা");
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
         upload_lout = findViewById(R.id.lout_upload);
