@@ -1,6 +1,7 @@
 package com.example.dhanoushodhi.adapters;
 
 import android.content.Context;
+
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -43,6 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         Log.d(TAG, "onBindHolder called.");
 
         viewHolder.image.setImageResource(R.drawable.bakani);
+
         Log.d(TAG, "onBindViewHolder called  --->  " + mImage.get(i));
         viewHolder.diseaseName.setText(mDiseaseName.get(i));
 
@@ -72,4 +74,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             btn_details = itemView.findViewById(R.id.btn_details);
         }
     }
+
 }
