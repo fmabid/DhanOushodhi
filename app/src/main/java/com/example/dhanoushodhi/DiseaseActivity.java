@@ -59,7 +59,7 @@ public class DiseaseActivity extends AppCompatActivity {
         Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.kando_pocha);
         disNames.add("ধানের কাণ্ড পচা রোগ");
 
-        imageUrls.add(R.drawable.bakani)
+        imageUrls.add(R.drawable.bakani);
         Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.bakani);
         disNames.add("বাকানি রোগ");
 
