@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dhanoushodhi">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,8 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UploadActivity"
+        <activity
+            android:name=".NutritionActivity"
             android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".PestActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".DiseaseActivity"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".UploadActivity"
+            android:theme="@style/NoActionBar" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
