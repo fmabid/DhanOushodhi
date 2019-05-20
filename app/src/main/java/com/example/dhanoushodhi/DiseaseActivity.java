@@ -32,35 +32,27 @@ public class DiseaseActivity extends AppCompatActivity {
 
     private void diseaseListFull() {
         imageUrls.add(R.drawable.leafblast);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.leafblast);
         disNames.add("ধানের পাতা ব্লাস্ট");
 
         imageUrls.add(R.drawable.leaf_scaled);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.leaf_scaled);
         disNames.add(" লিফ স্কোল্ড");
 
         imageUrls.add(R.drawable.sheath_blight);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.sheath_blight);
         disNames.add(" শেলথ ব্লাইট");
 
         imageUrls.add(R.drawable.sheath_rot);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.sheath_rot);
         disNames.add("শেলথ  রট");
 
         imageUrls.add(R.drawable.tungro);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.tungro);
         disNames.add(" টুংরো রোগ");
 
         imageUrls.add(R.drawable.ufra);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.ufra);
         disNames.add(" উফরা রোগ");
 
         imageUrls.add(R.drawable.kando_pocha);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.kando_pocha);
         disNames.add("ধানের কাণ্ড পচা রোগ");
 
         imageUrls.add(R.drawable.bakani);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.bakani);
         disNames.add("বাকানি রোগ");
 
         initRecyclerView();

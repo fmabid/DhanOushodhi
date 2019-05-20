@@ -2,6 +2,7 @@ package com.example.dhanoushodhi.adapters;
 
 import android.content.Context;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -15,8 +16,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.dhanoushodhi.DetailsActivity;
+import com.example.dhanoushodhi.HomeActivity;
 import com.example.dhanoushodhi.R;
+import com.example.dhanoushodhi.SplashScreenActivity;
 
 import java.util.ArrayList;
 
@@ -43,16 +48,29 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
-        Log.d(TAG, "onBindHolder called.");
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
+        /*Log.d(TAG, "onBindHolder called.   --> " + mContext);*/
 
-        /*viewHolder.image.setImageResource(mImage.get(i));*/
         viewHolder.image.setImageBitmap(decodeSampledBitmapFromResource(mContext.getResources(), mImage.get(i), 100, 100));
-
-        Log.d(TAG, "onBindViewHolder called  --->  " + mImage.get(i));
         viewHolder.diseaseName.setText(mDiseaseName.get(i));
 
-        /*viewHolder.image.setImageDrawable(Drawable.createFromPath(mImage.get(i)));*/
+        viewHolder.btn_details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, DetailsActivity.class);
+                intent.putExtra("diseaseName", mDiseaseName.get(i));
+                mContext.startActivity(intent);
+            }
+        });
+
+        viewHolder.btn_select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, DetailsActivity.class);
+                intent.putExtra("diseaseName", mDiseaseName.get(i));
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
