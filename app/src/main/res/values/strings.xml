@@ -40,4 +40,10 @@
 
     <string name="en_unknown_pest">Unknown Pest</string>
     <string name="bn_unknown_pest">অজানা কীট</string>
+
+    <string name="en_details">details</string>
+    <string name="bn_details">বিস্তারিত দেখুন</string>
+
+    <string name="en_select">select</string>
+    <string name="bn_select">নির্বাচন করুন</string>
 </resources>
