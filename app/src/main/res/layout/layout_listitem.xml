@@ -2,12 +2,13 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:padding="5dp"
+    android:id="@+id/rl_parent"
     android:layout_marginBottom="2dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/iv_image"
         android:src="@drawable/wallimage"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"
@@ -17,14 +18,14 @@
 
     <LinearLayout
         android:id="@+id/details_container"
-        android:layout_toRightOf="@+id/image"
+        android:layout_toRightOf="@+id/iv_image"
         android:layout_marginLeft="15dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/image_name"
+            android:id="@+id/tv_disease_name"
             android:text="Leaf Blast"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
@@ -38,15 +39,15 @@
             android:layout_height="wrap_content">
 
             <Button
+                android:id="@+id/btn_select"
                 android:text="@string/bn_select"
-                android:paddingHorizontal="20dp"
                 android:layout_marginRight="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <Button
+                android:id="@+id/btn_details"
                 android:text="@string/bn_details"
-                android:paddingHorizontal="20dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
