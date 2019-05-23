@@ -49,6 +49,7 @@ public class HomeActivity extends AppCompatActivity
             public void onClick(View v) {
                 Intent intent = new Intent(HomeActivity.this, UploadActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
