@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 
 public class DetailsActivity extends AppCompatActivity {
     private static final String TAG = "DetailsActivity";
@@ -19,12 +21,33 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        disease = getIntent().getStringExtra(DISEASE_SELECTED);
+        // disease = getIntent().getStringExtra(DISEASE_SELECTED);
+        /*Log.d(TAG, "onCreate called.   --> " + disease );*/
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(disease);
         setSupportActionBar(toolbar);
 
-        /*Log.d(TAG, "onCreate called.   --> " + disease );*/
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
+        startActivity(intent);
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
