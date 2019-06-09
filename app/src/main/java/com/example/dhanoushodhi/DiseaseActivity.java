@@ -41,19 +41,19 @@ public class DiseaseActivity extends AppCompatActivity {
         disNames.add("ধানের পাতা ব্লাস্ট");
 
         imageUrls.add(R.drawable.leaf_scaled);
-        disNames.add(" লিফ স্কোল্ড");
+        disNames.add("লিফ স্কোল্ড");
 
         imageUrls.add(R.drawable.sheath_blight);
-        disNames.add(" শেলথ ব্লাইট");
+        disNames.add("শেলথ ব্লাইট");
 
         imageUrls.add(R.drawable.sheath_rot);
-        disNames.add("শেলথ  রট");
+        disNames.add("শেলথ রট");
 
         imageUrls.add(R.drawable.tungro);
-        disNames.add(" টুংরো রোগ");
+        disNames.add("টুংরো রোগ");
 
         imageUrls.add(R.drawable.ufra);
-        disNames.add(" উফরা রোগ");
+        disNames.add("উফরা রোগ");
 
         imageUrls.add(R.drawable.kando_pocha);
         disNames.add("ধানের কাণ্ড পচা রোগ");
