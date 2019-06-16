@@ -22,6 +22,7 @@ import com.example.dhanoushodhi.DetailsActivity;
 import com.example.dhanoushodhi.HomeActivity;
 import com.example.dhanoushodhi.R;
 import com.example.dhanoushodhi.SplashScreenActivity;
+import com.example.dhanoushodhi.UploadImagesActivity;
 
 import java.util.ArrayList;
 
@@ -66,7 +67,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         viewHolder.btn_select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, DetailsActivity.class);
+                Intent intent = new Intent(mContext, UploadImagesActivity.class);
                 intent.putExtra("diseaseName", mDiseaseName.get(i));
                 mContext.startActivity(intent);
             }

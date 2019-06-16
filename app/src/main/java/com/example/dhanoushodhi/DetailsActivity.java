@@ -1,5 +1,6 @@
 package com.example.dhanoushodhi;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,6 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
         viewDetails(disease);
     }
 
+    @SuppressLint("SetTextI18n")
     private void viewDetails(String disease) {
         if ("ধানের পাতা ব্লাস্ট".equals(disease)) {
             tvDetails.setText("রোগ পরিচিতিঃ \n" +
