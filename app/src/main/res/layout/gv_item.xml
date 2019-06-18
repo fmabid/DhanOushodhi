@@ -11,7 +11,6 @@
         android:padding="10dp"
         android:id="@+id/ivGallery"
         android:src="@mipmap/ic_launcher_round"
-        android:scaleType="fitXY"
-        />
+        android:scaleType="fitXY" />
 
 </LinearLayout>
