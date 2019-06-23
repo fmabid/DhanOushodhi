@@ -10,7 +10,7 @@
         android:layout_width="130dp"
         android:padding="10dp"
         android:id="@+id/ivGallery"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@mipmap/ic_launcher"
         android:scaleType="fitXY" />
 
 </LinearLayout>
