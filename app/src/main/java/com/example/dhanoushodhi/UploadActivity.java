@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.View;
 
 import java.util.Objects;
@@ -24,6 +26,9 @@ public class UploadActivity extends AppCompatActivity {
         toolbar.setTitle("তালিকা");
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         view_disease = findViewById(R.id.cardview_disease);
         view_pest = findViewById(R.id.cardview_pests);
         view_nutrition = findViewById(R.id.cardview_nutrition_def);
@@ -33,6 +38,7 @@ public class UploadActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UploadActivity.this, DiseaseActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -41,6 +47,7 @@ public class UploadActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UploadActivity.this, PestActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -49,7 +56,26 @@ public class UploadActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(UploadActivity.this, NutritionActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(UploadActivity.this, HomeActivity.class);
+        startActivity(intent);
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent(UploadActivity.this, HomeActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

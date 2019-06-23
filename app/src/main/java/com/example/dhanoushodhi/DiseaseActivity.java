@@ -1,11 +1,14 @@
 package com.example.dhanoushodhi;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MenuItem;
 
 import com.example.dhanoushodhi.adapters.RecyclerViewAdapter;
 
@@ -27,40 +30,35 @@ public class DiseaseActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.bn_disease);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
         diseaseListFull();
     }
 
     private void diseaseListFull() {
         imageUrls.add(R.drawable.leafblast);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.leafblast);
         disNames.add("ধানের পাতা ব্লাস্ট");
 
         imageUrls.add(R.drawable.leaf_scaled);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.leaf_scaled);
-        disNames.add(" লিফ স্কোল্ড");
+        disNames.add("লিফ স্কোল্ড");
 
         imageUrls.add(R.drawable.sheath_blight);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.sheath_blight);
-        disNames.add(" শেলথ ব্লাইট");
+        disNames.add("শেলথ ব্লাইট");
 
         imageUrls.add(R.drawable.sheath_rot);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.sheath_rot);
-        disNames.add("শেলথ  রট");
+        disNames.add("শেলথ রট");
 
         imageUrls.add(R.drawable.tungro);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.tungro);
-        disNames.add(" টুংরো রোগ");
+        disNames.add("টুংরো রোগ");
 
         imageUrls.add(R.drawable.ufra);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.ufra);
-        disNames.add(" উফরা রোগ");
+        disNames.add("উফরা রোগ");
 
         imageUrls.add(R.drawable.kando_pocha);
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.kando_pocha);
         disNames.add("ধানের কাণ্ড পচা রোগ");
 
-        imageUrls.add(R.drawable.bakani)
-        Log.d(TAG, "diseaseListFull called ----->  "+ R.drawable.bakani);
+        imageUrls.add(R.drawable.bakani);
         disNames.add("বাকানি রোগ");
 
         initRecyclerView();
@@ -72,5 +70,23 @@ public class DiseaseActivity extends AppCompatActivity {
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(imageUrls, disNames, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = new Intent(DiseaseActivity.this, UploadActivity.class);
+        startActivity(intent);
+        finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            Intent intent = new Intent(DiseaseActivity.this, UploadActivity.class);
+            startActivity(intent);
+            finish();
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
