@@ -33,6 +33,14 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_sample"
+                android:layout_marginTop="15dp"
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true" />
         </LinearLayout>
 
     </ScrollView>
