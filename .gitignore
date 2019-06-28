@@ -13,3 +13,5 @@
 .externalNativeBuild
 .idea/
 .idea
+.apk
+/release
