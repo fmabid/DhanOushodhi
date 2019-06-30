@@ -17,8 +17,10 @@ public class DetailsActivity extends AppCompatActivity {
     private static final String TAG = "DetailsActivity";
 
     private final static String DISEASE_SELECTED = "diseaseName";
+    private final static String CATEGORY = "category";
 
     String disease;
+    String category_name;
     TextView tvDetails;
     ImageView img1, img2;
 
@@ -28,6 +30,7 @@ public class DetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_details);
 
         disease = getIntent().getStringExtra(DISEASE_SELECTED);
+        category_name = getIntent().getStringExtra(CATEGORY);
         /*Log.d(TAG, "onCreate called.   --> " + disease );*/
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -40,7 +43,29 @@ public class DetailsActivity extends AppCompatActivity {
         tvDetails = findViewById(R.id.tv_disease_details);
         img1 = findViewById(R.id.iv_sample);
 
-        viewDetails(disease);
+        if (category_name.equals("রোগ")) {
+            viewDetails(disease);
+        } else if (category_name.equals("কীট")) {
+            viewPestDetails(disease);
+        }
+
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void viewPestDetails(String pest) {
+        if ("গল মাছি বা নলি মাছি".equals(disease)) {
+            tvDetails.setText("sajnljdnlkajn");
+            Glide.with(this).load(R.drawable.leafblast).into(img1);
+        } else if ("সাদাপিঠ গাছফড়িং".equals(disease)) {
+            tvDetails.setText("sajnljsgbtdgdnlkajn");
+            Glide.with(this).load(R.drawable.leafblast).into(img1);
+        } else if ("ঘাসফড়িং".equals(disease)) {
+            tvDetails.setText("sajnlsghsjdnlkajn");
+            Glide.with(this).load(R.drawable.leafblast).into(img1);
+        } else if ("পাতা মোড়ানো পোকা".equals(disease)) {
+            tvDetails.setText("sajnlgshsjdnlkajn");
+            Glide.with(this).load(R.drawable.leafblast).into(img1);
+        }
     }
 
     @SuppressLint("SetTextI18n")
