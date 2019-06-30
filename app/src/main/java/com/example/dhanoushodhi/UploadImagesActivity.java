@@ -30,14 +30,15 @@ import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 public class UploadImagesActivity extends AppCompatActivity {
     private static final String TAG = "UploadImagesActivity";
 
     private final static String DISEASE_SELECTED = "diseaseName";
+    private final static String CATEGORY = "category";
 
     String disease;
+    String category_name;
 
     /*  Variables for image select & uploading purpose  */
     private Button btn;
@@ -59,6 +60,7 @@ public class UploadImagesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_upload_images);
 
         disease = getIntent().getStringExtra(DISEASE_SELECTED);
+        category_name = getIntent().getStringExtra(CATEGORY);
         // Log.d(TAG, "onCreate called.   --> " + disease );
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -134,6 +136,7 @@ public class UploadImagesActivity extends AppCompatActivity {
 
                             ClipData.Item item = mClipData.getItemAt(i);
                             Uri uri = item.getUri();
+                            Log.v("LOG_TAG", "Selected Images URI ---> " +  uri);
                             mArrayUri.add(uri);
                             // Get the cursor
                             Cursor cursor = getContentResolver().query(uri, filePathColumn, null, null, null);
@@ -151,15 +154,14 @@ public class UploadImagesActivity extends AppCompatActivity {
                             ViewGroup.MarginLayoutParams mlp = (ViewGroup.MarginLayoutParams) gvGallery.getLayoutParams();
                             mlp.setMargins(0, gvGallery.getHorizontalSpacing(), 0, 0);
                         }
-                        Log.v("LOG_TAG", "Selected Images" + mArrayUri.size() + " " + mArrayUri.get(1).getPath() + " ----> " + mArrayUri);
+                        Log.v("LOG_TAG", "Selected Images " + mArrayUri.size() + " " + mArrayUri.get(1).getPath() + " ----> " + mArrayUri);
                     }
                 }
             } else {
-                Toast.makeText(this, "You haven't picked Image", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "কোন ছবি নির্বাচন করা হয়নি", Toast.LENGTH_LONG).show();
             }
         } catch (Exception e) {
-            Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG)
-                    .show();
+            Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show();
         }
 
         super.onActivityResult(requestCode, resultCode, data);
@@ -167,40 +169,37 @@ public class UploadImagesActivity extends AppCompatActivity {
 
     private void uploadImage() {
 
-        if(mArrayUri != null)
-        {
+        if (mArrayUri != null) {
             final ProgressDialog progressDialog = new ProgressDialog(this);
-            progressDialog.setTitle("Uploading...");
+            progressDialog.setTitle("আপলোড হচ্ছে...");
             progressDialog.show();
 
             for (int i = 0; i < mArrayUri.size(); i++) {
-                StorageReference ref = storageReference.child("image/"+ mArrayUri.get(i).getPath());
+                StorageReference ref = storageReference.child(category_name + "/" + disease + "/" + mArrayUri.get(i).getPath().replace("document/", ""));
                 ref.putFile(mArrayUri.get(i)).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         progressDialog.dismiss();
-                        Toast.makeText(UploadImagesActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UploadImagesActivity.this, "আপলোড হয়েছে ", Toast.LENGTH_SHORT).show();
                     }
-                })
-                        .addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                progressDialog.dismiss();
-                                Toast.makeText(UploadImagesActivity.this, "Failed "+ e.getMessage(), Toast.LENGTH_SHORT).show();
-                                Log.v("LOG_TAG", "Failed n" + e.getMessage());
-                            }
-                        })
-                        .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                            @Override
-                            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                                double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
-                                        .getTotalByteCount());
-                                progressDialog.setMessage("Uploaded "+(int)progress+"%");
-                            }
-                        });
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        progressDialog.dismiss();
+                        Toast.makeText(UploadImagesActivity.this, "আপলোড হয়নি" + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Log.v("LOG_TAG", "Failed n" + e.getMessage());
+                    }
+                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                        double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot
+                                .getTotalByteCount());
+                        progressDialog.setMessage("আপলোড হয়েছে " + (int) progress + "%");
+                    }
+                });
             }
-
-
+        } else {
+            Toast.makeText(this, "কোন ছবি নির্বাচন করা হয়নি", Toast.LENGTH_LONG).show();
         }
     }
 

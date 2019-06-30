@@ -33,10 +33,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<Integer> mImage;
     private ArrayList<String> mDiseaseName = new ArrayList<>();
     private Context mContext;
+    private String category;
 
-    public RecyclerViewAdapter(ArrayList<Integer> mImage, ArrayList<String> mDiseaseName, Context mContext) {
+    public RecyclerViewAdapter(ArrayList<Integer> mImage, ArrayList<String> mDiseaseName, String category, Context mContext) {
         this.mImage = mImage;
         this.mDiseaseName = mDiseaseName;
+        this.category = category;
         this.mContext = mContext;
     }
 
@@ -69,6 +71,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, UploadImagesActivity.class);
                 intent.putExtra("diseaseName", mDiseaseName.get(i));
+                intent.putExtra("category", category);
                 mContext.startActivity(intent);
             }
         });
