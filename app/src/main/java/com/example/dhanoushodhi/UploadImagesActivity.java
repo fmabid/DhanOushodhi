@@ -207,18 +207,52 @@ public class UploadImagesActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
-        startActivity(intent);
-        finish();
+        switch (category_name) {
+            case "রোগ": {
+                Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            }
+            case "কীট": {
+                Intent intent = new Intent(UploadImagesActivity.this, PestActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            }
+            case "পুষ্টি দুর্বলতা": {
+                Intent intent = new Intent(UploadImagesActivity.this, NutritionActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
-            startActivity(intent);
-            finish();
+            switch (category_name) {
+                case "রোগ": {
+                    Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+                }
+                case "কীট": {
+                    Intent intent = new Intent(UploadImagesActivity.this, PestActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+                }
+                case "পুষ্টি দুর্বলতা": {
+                    Intent intent = new Intent(UploadImagesActivity.this, NutritionActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+                }
+            }
         }
         return super.onKeyDown(keyCode, event);
     }

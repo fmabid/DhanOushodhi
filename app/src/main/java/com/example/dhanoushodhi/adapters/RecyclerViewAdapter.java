@@ -106,7 +106,30 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 }
             });
         } else if (category.equals("পুষ্টি দুর্বলতা")) {
+            viewHolder.image.setImageBitmap(decodeSampledBitmapFromResource(mContext.getResources(), mImage.get(i), 100, 100));
+            viewHolder.diseaseName.setText(mDiseaseName.get(i));
 
+            viewHolder.btn_details.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, DetailsActivity.class);
+                    intent.putExtra("diseaseName", mDiseaseName.get(i));
+                    intent.putExtra("category", category);
+                    mContext.startActivity(intent);
+                    ((Activity)mContext).finish();
+                }
+            });
+
+            viewHolder.btn_select.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, UploadImagesActivity.class);
+                    intent.putExtra("diseaseName", mDiseaseName.get(i));
+                    intent.putExtra("category", category);
+                    mContext.startActivity(intent);
+                    ((Activity)mContext).finish();
+                }
+            });
         }
 
     }
