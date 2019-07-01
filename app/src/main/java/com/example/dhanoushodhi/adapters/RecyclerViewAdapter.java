@@ -1,5 +1,6 @@
 package com.example.dhanoushodhi.adapters;
 
+import android.app.Activity;
 import android.content.Context;
 
 import android.content.Intent;
@@ -54,30 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int i) {
         /*Log.d(TAG, "onBindHolder called.   --> " + mContext);*/
 
-        viewHolder.image.setImageBitmap(decodeSampledBitmapFromResource(mContext.getResources(), mImage.get(i), 100, 100));
-        viewHolder.diseaseName.setText(mDiseaseName.get(i));
-
-        viewHolder.btn_details.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, DetailsActivity.class);
-                intent.putExtra("diseaseName", mDiseaseName.get(i));
-                intent.putExtra("category", category);
-                mContext.startActivity(intent);
-            }
-        });
-
-        viewHolder.btn_select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mContext, UploadImagesActivity.class);
-                intent.putExtra("diseaseName", mDiseaseName.get(i));
-                intent.putExtra("category", category);
-                mContext.startActivity(intent);
-            }
-        });
-
-        /*if (category.equals("রোগ")) {
+        if (category.equals("রোগ")) {
             viewHolder.image.setImageBitmap(decodeSampledBitmapFromResource(mContext.getResources(), mImage.get(i), 100, 100));
             viewHolder.diseaseName.setText(mDiseaseName.get(i));
 
@@ -88,6 +66,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
                     mContext.startActivity(intent);
+                    ((Activity)mContext).finish();
                 }
             });
 
@@ -98,35 +77,37 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
                     mContext.startActivity(intent);
+                    ((Activity)mContext).finish();
                 }
             });
+        } else if (category.equals("কীট")) {
+            viewHolder.image.setImageBitmap(decodeSampledBitmapFromResource(mContext.getResources(), mImage.get(i), 100, 100));
+            viewHolder.diseaseName.setText(mDiseaseName.get(i));
+
+            viewHolder.btn_details.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, DetailsActivity.class);
+                    intent.putExtra("diseaseName", mDiseaseName.get(i));
+                    intent.putExtra("category", category);
+                    mContext.startActivity(intent);
+                    ((Activity)mContext).finish();
+                }
+            });
+
+            viewHolder.btn_select.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, UploadImagesActivity.class);
+                    intent.putExtra("diseaseName", mDiseaseName.get(i));
+                    intent.putExtra("category", category);
+                    mContext.startActivity(intent);
+                    ((Activity)mContext).finish();
+                }
+            });
+        } else if (category.equals("পুষ্টি দুর্বলতা")) {
+
         }
-        if (category.equals("কীট")) {
-            viewHolder.image.setImageBitmap(decodeSampledBitmapFromResource(mContext.getResources(), mImage.get(i), 100, 100));
-            viewHolder.diseaseName.setText(mDiseaseName.get(i));
-
-            viewHolder.btn_details.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, DetailsActivity.class);
-                    intent.putExtra("diseaseName", mDiseaseName.get(i));
-                    intent.putExtra("category", category);
-                    mContext.startActivity(intent);
-                }
-            });
-
-            viewHolder.btn_select.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(mContext, UploadImagesActivity.class);
-                    intent.putExtra("diseaseName", mDiseaseName.get(i));
-                    intent.putExtra("category", category);
-                    mContext.startActivity(intent);
-                }
-            });
-        }*/ /*else if (category.equals("পুষ্টি দুর্বলতা")) {
-
-        }*/
 
     }
 
