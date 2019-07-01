@@ -20,6 +20,7 @@ public class DiseaseActivity extends AppCompatActivity {
 
     private ArrayList<Integer> imageUrls = new ArrayList<Integer>();
     private ArrayList<String> disNames = new ArrayList<>();
+    private String category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,8 @@ public class DiseaseActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle(R.string.bn_disease);
         setSupportActionBar(toolbar);
+        category = toolbar.getTitle().toString();
+        // Log.d(TAG, "cat.   --> " + category);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -67,7 +70,7 @@ public class DiseaseActivity extends AppCompatActivity {
     private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.my_recycler_view);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(imageUrls, disNames, this);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(imageUrls, disNames, category, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
