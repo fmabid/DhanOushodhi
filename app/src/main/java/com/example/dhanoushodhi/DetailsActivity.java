@@ -53,18 +53,88 @@ public class DetailsActivity extends AppCompatActivity {
 
     @SuppressLint("SetTextI18n")
     private void viewPestDetails(String pest) {
-        if ("গল মাছি বা নলি মাছি".equals(disease)) {
-            tvDetails.setText("sajnljdnlkajn");
-            Glide.with(this).load(R.drawable.leafblast).into(img1);
-        } else if ("সাদাপিঠ গাছফড়িং".equals(disease)) {
-            tvDetails.setText("sajnljsgbtdgdnlkajn");
-            Glide.with(this).load(R.drawable.leafblast).into(img1);
-        } else if ("ঘাসফড়িং".equals(disease)) {
-            tvDetails.setText("sajnlsghsjdnlkajn");
-            Glide.with(this).load(R.drawable.leafblast).into(img1);
-        } else if ("পাতা মোড়ানো পোকা".equals(disease)) {
-            tvDetails.setText("sajnlgshsjdnlkajn");
-            Glide.with(this).load(R.drawable.leafblast).into(img1);
+        if ("গল মাছি বা নলি মাছি".equals(pest)) {
+            tvDetails.setText("পোকা পরিচিতিঃ \n" +
+                    "\tগলমাছি প্রধাণত রোপা আমন ফসলের ক্ষতি করে থাকে। তবে, আবহাওয়া অনুকূল হলে আউশ ফসলেও আক্রমণ করতে পারে।\n" +
+                    "\n" +
+                    "পূর্ণবয়স্ক গল মাছি দেখতে একটা মশার মত, পেট উজ্জ্বল লাল রঙের স্ত্রী গল মাছি পাতার নিচে বা খোলপাতার উপর একটি একটি করে ডিম পাড়ে। ডিম থেকে কীড়া ফুটতে ৩-৪ দিন লাগে। সদ্য ফোটা কীড়াগুলো মাঝখানের পাতার গোড়ায় খেতে থাকে। ফলে, মাঝখানের পাতাটি নলাকার বা গল হয়ে ঘায়। এই গলের ভিতরে কীড়া পুক্তলিতে পরিণত হয় এবং পুত্তলি থেকে পূর্ণ বয়স্ক গল মাছি বের হয়ে আসে। গল মাছির জীবন চক্র আড়াই থেকে তিন সপ্তাহ পর্যন্ত হতে পারে।\n" +
+                    "\n" +
+                    "\n" +
+                    "ক্ষতিঃ \n" +
+                    "\n" +
+                    "» এ পোকার কীড়া ধান গাছের মাঝখানের পাতার ক্ষতি করে।\n" +
+                    "» শুধুমাত্র আমন মৌসুমে এই পোকার প্রাদুর্ভাব দেখা যায়।\n" +
+                    "» ধান গাছ কুশি অবস্থায় আক্রান্ত হয়। কাইচথোড় অবস্থায় গলমাছি গল সৃষ্টি করতে পারে না।\n" +
+                    "» এ পোকার ক্ষতির নমুনাকে বাংলায় পেয়াজপাতা এবং ইংরেজীতে সিলভার শুট বলা হয়।\n" +
+                    "\n" +
+                    "\n" +
+                    "দমন ব্যবস্থাপনাঃ \n" +
+                    "\n" +
+                    "» আলোক ফাঁদের সাহায্যে পূর্ণবয়স্ক পোকা মেরে ফেলা\n" +
+                    "» প্রয়োজনে কীটনাশক ব্যবহার করা । (তবে এক্ষেত্রে শতকরা ৫ ভাগ পেঁয়াজপাতা বা গল পাওয়া গেলেই \n" +
+                    "শুধু কীটনাশক প্রয়োগের চিন্তা করা উচিত ।)");
+            Glide.with(this).load(R.drawable.gall_midge).into(img1);
+        } else if ("সাদাপিঠ গাছফড়িং".equals(pest)) {
+            tvDetails.setText("পোকা পরিচিতিঃ \n" +
+                    "\tপূর্ণবয়স্ক সাদাপিঠ গাছফড়িং প্রায় ৩-৪ মিলিমিটার লম্বা। এদের গায়ের রঙ বাদামি এবং পিঠে সাদা দাগ থাকে। কীড়াগুলো বাদামি কালো ও সাদা রঙ মিশ্রিত। পোকাটি বাদামি গাছ ফড়িংয়ের সাথে একই জমি বা গাছে দেখতে পাওয়া যায়। \n" +
+                    "পূর্ণবয়স্ক ত্ত্রী ফড়িং পাতার খোল, পাতা ও পাতার মধ্যশিরার ভিতরে ডিম পাড়ে। পাচ থেকে আট দিনের মধ্যে ডিম থেকে কীড়া বের হয়। পূর্ণবয়স্ক ফড়িংয়ে পরিণত হতে আবহাওয়া ভেদে ১১-১৪ দিন সময় লাগে। সাদাপিঠ গাছফড়িংয়ের জী বনচক্র শেষ হতে প্রায় তিন সপ্তাহ সময় লাগে।\n" +
+                    "\n" +
+                    "\n" +
+                    "ক্ষতি\n" +
+                    "» কীড়া ও পূর্ণবয়ক্ক উভয়ই গাছের গোড়া থেকে রস শুষে খায়।\n" +
+                    "» বিপুল সংখ্যক ফড়িং রস শুষে খাওয়ার ফলে হপার বার্ণ বা ফড়িং\n" +
+                    "পোড়ার সৃষ্টি হয়।\n" +
+                    "» বোরো ও আমন মৌসুমে এ পোকার আক্রমণ দেখা যায়।\n" +
+                    "» আর্দ্র ও ছায়াযুক্ত স্থান এবং জমিতে পানি জমে থাকলে আক্রমণ বেশি\n" +
+                    "হয়।" +
+                    "\n" +
+                    "\n" +
+                    "দমন ব্যবস্থাপনাঃ \n" +
+                    "\n" +
+                    "» আলোকফাঁদ ব্যবহার করা।\n" +
+                    "» জমিতে রোপণের দূরতৃ বাড়িয়ে দেয়া।\n" +
+                    "» জমি থেকে পানি সরিয়ে দেয়া ।\n" +
+                    "» উর্বর জমিতে ইউরিয়া সার উপরি প্রয়োগ থেকে বিরত থাকা ।\n" +
+                    "» শুধু প্রয়োজনে কীটনাশক ব্যবহার করা ।\n" +
+                    "» পরতোজী পোকা যেমন মাকড়সার সংখ্যা বৃদ্ধি করার সুযোগ দিলে এ পোকার আক্রমণ প্রতিহত করা যায়।");
+            Glide.with(this).load(R.drawable.wbph).into(img1);
+        } else if ("ঘাসফড়িং".equals(pest)) {
+            tvDetails.setText("পোকা পরিচিতিঃ \n" +
+                    "\n" +
+                    "\tপূর্ণবয়স্ক ঘাসফড়িং ৩-৪ সেন্টিমিটার লম্বা। পিছনের দু'টো পা লম্বা হওয়ায় এরা লাফিয়ে লাফিয়ে চলে। এদের গায়ের রঙ হালকা \n" +
+                    " সবুজ অথবা হলদে বাদামি। স্ত্রী ফড়িং মাটির মধ্যে ডিম পাড়ে। ডিম থেকে কীড়া ফুটতে ১৫-১৮ দিন লাগে। আবহাওয়া ভেদে কীড়া আড়াই থেকে তিন মাস এবং পূর্ণবয়স্ক ফড়িং দেড় থেকে দুই মাস বেঁচে থাকে। এদের জীবন চক্র শেষ হতে প্রায় তিন মাস সময় লাগে।\n" +
+                    "\n" +
+                    "\n" +
+                    "\n" +
+                    "ক্ষতি\n" +
+                    "* বাচ্চা এবং পূর্ণবয়স্ক ফড়িং উভয়েই ধান গাছের ক্ষতি করে।\n" +
+                    "* এরা গাছের পাতা কিনারা থেকে কেটে কেটে খায়। আক্রমণ বেশি হলে এরা পাতার মধ্য শিরা বাদে সম্পূর্ণ পাতা খেয়ে ফেলতে পারে।\n" +
+                    "* এ ধরনের ক্ষতির ফলে গাছ দুর্বল হয়ে পড়ে এবং ফলন কমে যায়।\n" +
+                    "* আউশ মৌসুমে এ পোকার প্রাদুর্ভাব বেশি হলেও বোরো ও রোপা আমন ফসলেও এর আক্রমণ দেখতে পাওয়া যায়।" +
+                    "\n" +
+                    "\n" +
+                    "দমন ব্যস্থাপনাঃ \n" +
+                    "\n" +
+                    "* হাত জাল দিয়ে পোকা ধরে মেরে ফেলা।\n" +
+                    "* ডালপালা পুঁতে পোকা খেকো পাখি বসার ব্যবস্থা করা।\n" +
+                    "* প্রয়োজনে কীটনাশক ব্যবহার করা । (তবে এক্ষেত্রে শতকরা ২৫ ভাগ পাতা ক্ষতিত্রস্ত হলেই কীটনাশক প্রয়োগের চিন্তা করা উচিত)।");
+            Glide.with(this).load(R.drawable.grasshopper).into(img1);
+        } else if ("পাতা মোড়ানো পোকা".equals(pest)) {
+            tvDetails.setText("পোকা পরিচিতিঃ \n" +
+                    "\tপূর্ণবয়স্ক পাতামোড়ানো পোকা এক ধরনের মথ। গায়ের রঙ বাদামি এবং পাখায় আড়াআড়ি ভাবে ২-৩টি দাগ থাকে। এ পোকার জীবনচক্রে চারটি স্তর থাকে (ডিম, কীড়া, পুস্তলি এবং বয়স্ক মথ)। পূর্ণবযস্কস্ত্রী মথ পাতার মধ্যশিরার কাছে একটা একটা করে ডিম পাড়ে এবং ৫-৭ দিনের মধ্যে ডিম থেকে কিড়া বের হয়। কীড়াগুলো মোড়ানো পাতার মধ্যেই জীবন কাটায়। তিন থেকে চার সপ্তাহে কীড়া পুত্তলিতে পরিণত হয়। পুত্তলির জীবনকাল এক সপ্তাহ এবং পূর্ণবয়স্ক মথ ৭-১০ দিন বেঁচে থাকতে পারে।\n" +
+                    "\n" +
+                    "\n" +
+                    "ক্ষতিঃ \n" +
+                    "» পাতামোড়ানো পোকার কীড়া পাতা লম্বালম্বিভাবে মুড়িয়ে পাতার সবুজ অংশখায়।\n" +
+                    "\n" +
+                    "» খুব বেশি ক্ষতি করলে পাতা পুড়ে যাওয়ার মতো দেখায়।" +
+                    "\n" +
+                    "\n" +
+                    "দমন ব্যবস্থাপনাঃ \n" +
+                    "» আলোক ফাঁদের সাহায্যে পোকা ধরে মেরে ফেলা ।\n" +
+                    "» ক্ষেতে ডালপালা পুঁতে পোকাখেকো পাখির সাহায্যে দমন করা ।\n" +
+                    "» প্রয়োজনে কীটনাশক ব্যবহার করা । (তবে এক্ষেত্রে শতকরা ২৫ ভাগ পাতা ক্ষতিগ্রস্ত হলেই কীটনাশক প্রয়োগের চিন্তা করা উচিত)।");
+            Glide.with(this).load(R.drawable.riceleaf_folder).into(img1);
         }
     }
 
@@ -295,18 +365,52 @@ public class DetailsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
-        startActivity(intent);
-        finish();
+        switch (category_name) {
+            case "রোগ": {
+                Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            }
+            case "কীট": {
+                Intent intent = new Intent(DetailsActivity.this, PestActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            }
+            case "পুষ্টি দুর্বলতা": {
+                Intent intent = new Intent(DetailsActivity.this, NutritionActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
-            startActivity(intent);
-            finish();
+            switch (category_name) {
+                case "রোগ": {
+                    Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+                }
+                case "কীট": {
+                    Intent intent = new Intent(DetailsActivity.this, PestActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+                }
+                case "পুষ্টি দুর্বলতা": {
+                    Intent intent = new Intent(DetailsActivity.this, NutritionActivity.class);
+                    startActivity(intent);
+                    finish();
+                    break;
+                }
+            }
         }
         return super.onKeyDown(keyCode, event);
     }

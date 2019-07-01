@@ -49,7 +49,7 @@ public class PestActivity extends AppCompatActivity {
         imageUrls.add(R.drawable.grasshopper);
         pestNames.add("ঘাসফড়িং");
 
-        imageUrls.add(R.drawable.leaf_scaled);
+        imageUrls.add(R.drawable.riceleaf_folder);
         pestNames.add("পাতা মোড়ানো পোকা");
 
         initRecyclerView();
