@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.dhanoushodhi.adapters.RecyclerViewAdapter;
 
@@ -21,6 +23,8 @@ public class NutritionActivity extends AppCompatActivity {
     private ArrayList<Integer> imageUrls = new ArrayList<Integer>();
     private ArrayList<String> deficiencyNames = new ArrayList<>();
     private String category;
+
+    Button btn_unknown;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,19 @@ public class NutritionActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        btn_unknown = findViewById(R.id.btn_unknown);
+
+        btn_unknown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(NutritionActivity.this, UploadImagesActivity.class);
+                intent.putExtra("unknown", "UNK");
+                intent.putExtra("category", category);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         nutritionListFull();
     }
