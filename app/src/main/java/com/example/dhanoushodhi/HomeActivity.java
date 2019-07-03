@@ -1,6 +1,9 @@
 package com.example.dhanoushodhi;
 
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -64,11 +67,25 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
+    public static void watchYoutubeVideo(Context context){
+        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube.com/watch?v=CIaPy19Tzzc"));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=CIaPy19Tzzc"));
+        try {
+            context.startActivity(appIntent);
+        } catch (ActivityNotFoundException ex) {
+            context.startActivity(webIntent);
+        }
+    }
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+
+        if (id == R.id.nav_uses) {
+            watchYoutubeVideo(HomeActivity.this);
+        }
 
         /*if (id == R.id.nav_home) {
             // Handle the camera action

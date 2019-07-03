@@ -11,15 +11,15 @@
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_gallery" />-->
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />-->
-        <item
+            android:id="@+id/nav_uses"
+            android:icon="@drawable/ic_touch_app_black_24dp"
+            android:title="@string/menu_uses" />
+        <!--<item
             android:id="@+id/nav_tools"
             android:icon="@drawable/ic_settings_black_24dp"
-            android:title="@string/menu_settings" />
+            android:title="@string/menu_settings" />-->
     </group>
 
 </menu>
