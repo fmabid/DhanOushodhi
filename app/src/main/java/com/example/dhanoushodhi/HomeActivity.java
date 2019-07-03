@@ -50,11 +50,21 @@ public class HomeActivity extends AppCompatActivity
         upload_lout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, UploadActivity.class);
+                Intent intent = new Intent(HomeActivity.this, AuthForDataCollectionActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
+
+        //  Detect
+        /*detect_lout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, UploadActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });*/
     }
 
     @Override
