@@ -36,9 +36,11 @@ public class UploadImagesActivity extends AppCompatActivity {
 
     private final static String DISEASE_SELECTED = "diseaseName";
     private final static String CATEGORY = "category";
+    private final static String UNK = "unknown";
 
     String disease;
     String category_name;
+    String unknown;
 
     /*  Variables for image select & uploading purpose  */
     private Button btn;
@@ -59,8 +61,13 @@ public class UploadImagesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_upload_images);
 
-        disease = getIntent().getStringExtra(DISEASE_SELECTED);
-        category_name = getIntent().getStringExtra(CATEGORY);
+        if (getIntent().getStringExtra(UNK)!=null) {
+            category_name = "অজানা";
+            disease = getIntent().getStringExtra(CATEGORY);
+        } else {
+            disease = getIntent().getStringExtra(DISEASE_SELECTED);
+            category_name = getIntent().getStringExtra(CATEGORY);
+        }
         // Log.d(TAG, "onCreate called.   --> " + disease );
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -207,53 +214,73 @@ public class UploadImagesActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (category_name) {
-            case "রোগ": {
+        if ("অজানা".equals(category_name)) {
+            if ("রোগ".equals(disease)) {
                 Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
                 startActivity(intent);
                 finish();
-                break;
-            }
-            case "কীট": {
+            } else if ("কীট".equals(disease)) {
                 Intent intent = new Intent(UploadImagesActivity.this, PestActivity.class);
                 startActivity(intent);
                 finish();
-                break;
-            }
-            case "পুষ্টি দুর্বলতা": {
+            } else if ("পুষ্টি দুর্বলতা".equals(disease)) {
                 Intent intent = new Intent(UploadImagesActivity.this, NutritionActivity.class);
                 startActivity(intent);
                 finish();
-                break;
+            }
+        } else {
+            if ("রোগ".equals(category_name)) {
+                Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
+                startActivity(intent);
+                finish();
+            } else if ("কীট".equals(category_name)) {
+                Intent intent = new Intent(UploadImagesActivity.this, PestActivity.class);
+                startActivity(intent);
+                finish();
+            } else if ("পুষ্টি দুর্বলতা".equals(category_name)) {
+                Intent intent = new Intent(UploadImagesActivity.this, NutritionActivity.class);
+                startActivity(intent);
+                finish();
             }
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
-            switch (category_name) {
-                case "রোগ": {
+            if ("অজানা".equals(category_name)) {
+                if ("রোগ".equals(disease)) {
                     Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
                     startActivity(intent);
                     finish();
-                    break;
-                }
-                case "কীট": {
+                } else if ("কীট".equals(disease)) {
                     Intent intent = new Intent(UploadImagesActivity.this, PestActivity.class);
                     startActivity(intent);
                     finish();
-                    break;
-                }
-                case "পুষ্টি দুর্বলতা": {
+                } else if ("পুষ্টি দুর্বলতা".equals(disease)) {
                     Intent intent = new Intent(UploadImagesActivity.this, NutritionActivity.class);
                     startActivity(intent);
                     finish();
-                    break;
+                }
+            } else {
+                if ("রোগ".equals(category_name)) {
+                    Intent intent = new Intent(UploadImagesActivity.this, DiseaseActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else if ("কীট".equals(category_name)) {
+                    Intent intent = new Intent(UploadImagesActivity.this, PestActivity.class);
+                    startActivity(intent);
+                    finish();
+                } else if ("পুষ্টি দুর্বলতা".equals(category_name)) {
+                    Intent intent = new Intent(UploadImagesActivity.this, NutritionActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
             }
         }
+
         return super.onKeyDown(keyCode, event);
     }
 }

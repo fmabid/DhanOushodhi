@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/ToolBarTheme"
+    tools:context=".UploadActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:layout_marginHorizontal="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_warning"
+            android:text="পরবর্তী ধাপে যেতে আপনার ৪ সংখ্যার কোডটি প্রদান করুন"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="18dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_pin"
+            android:textColor="@color/colorPrimary"
+            android:hint="কোড"
+            android:layout_gravity="center"
+            android:elevation="2dp"
+            android:inputType="textPassword"
+            android:maxLength="7"
+            android:layout_marginBottom="15dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_pin_submit"
+            android:text="নিশ্চিত করা"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>
