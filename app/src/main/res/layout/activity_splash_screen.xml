@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:src="@mipmap/ic_launcher_background"
+            android:src="@mipmap/ic_launcher"
             android:padding="10dp"
             android:layout_width="130dp"
             android:layout_height="130dp"
