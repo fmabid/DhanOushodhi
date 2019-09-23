@@ -57,14 +57,14 @@ public class HomeActivity extends AppCompatActivity
         });
 
         //  Detect
-        /*detect_lout.setOnClickListener(new View.OnClickListener() {
+        detect_lout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, UploadActivity.class);
+                Intent intent = new Intent(HomeActivity.this, DetectImageActivity.class);
                 startActivity(intent);
                 finish();
             }
-        });*/
+        });
     }
 
     @Override
