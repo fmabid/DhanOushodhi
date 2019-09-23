@@ -49,7 +49,7 @@ public class AuthForDataCollectionActivity extends AppCompatActivity {
     }
 
     private boolean verified(String pin) {
-        if ("2624".equals(pin)) {
+        if ("1234".equals(pin)) {
             return true;
         }
 
