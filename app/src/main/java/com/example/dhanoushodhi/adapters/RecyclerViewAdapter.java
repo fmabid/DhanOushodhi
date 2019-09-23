@@ -65,6 +65,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Intent intent = new Intent(mContext, DetailsActivity.class);
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
+                    intent.putExtra("detect", "");
                     mContext.startActivity(intent);
                     ((Activity)mContext).finish();
                 }
@@ -76,6 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Intent intent = new Intent(mContext, UploadImagesActivity.class);
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
+                    intent.putExtra("detect", "");
                     mContext.startActivity(intent);
                     ((Activity)mContext).finish();
                 }
@@ -90,6 +92,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Intent intent = new Intent(mContext, DetailsActivity.class);
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
+                    intent.putExtra("detect", "");
                     mContext.startActivity(intent);
                     ((Activity)mContext).finish();
                 }
@@ -101,6 +104,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Intent intent = new Intent(mContext, UploadImagesActivity.class);
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
+                    intent.putExtra("detect", "");
                     mContext.startActivity(intent);
                     ((Activity)mContext).finish();
                 }
@@ -115,6 +119,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Intent intent = new Intent(mContext, DetailsActivity.class);
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
+                    intent.putExtra("detect", "");
                     mContext.startActivity(intent);
                     ((Activity)mContext).finish();
                 }
@@ -126,6 +131,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Intent intent = new Intent(mContext, UploadImagesActivity.class);
                     intent.putExtra("diseaseName", mDiseaseName.get(i));
                     intent.putExtra("category", category);
+                    intent.putExtra("detect", "");
                     mContext.startActivity(intent);
                     ((Activity)mContext).finish();
                 }

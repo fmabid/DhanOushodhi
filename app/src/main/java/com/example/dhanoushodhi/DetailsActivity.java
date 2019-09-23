@@ -18,9 +18,11 @@ public class DetailsActivity extends AppCompatActivity {
 
     private final static String DISEASE_SELECTED = "diseaseName";
     private final static String CATEGORY = "category";
+    private final static String CLASS_ID = "detect";
 
     String disease;
     String category_name;
+    String class_id;
     TextView tvDetails;
     ImageView img1, img2;
 
@@ -31,6 +33,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         disease = getIntent().getStringExtra(DISEASE_SELECTED);
         category_name = getIntent().getStringExtra(CATEGORY);
+        class_id = getIntent().getStringExtra(CLASS_ID);
         /*Log.d(TAG, "onCreate called.   --> " + disease );*/
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -425,53 +428,51 @@ public class DetailsActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (category_name) {
-            case "রোগ": {
+        if (class_id.equals("detect")) {
+            Intent intent = new Intent(DetailsActivity.this, DetectImageActivity.class);
+            startActivity(intent);
+            finish();
+        }else {
+            if ("রোগ".equals(category_name)) {
                 Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
                 startActivity(intent);
                 finish();
-                break;
-            }
-            case "কীট": {
+            } else if ("কীট".equals(category_name)) {
                 Intent intent = new Intent(DetailsActivity.this, PestActivity.class);
                 startActivity(intent);
                 finish();
-                break;
-            }
-            case "পুষ্টি দুর্বলতা": {
+            } else if ("পুষ্টি দুর্বলতা".equals(category_name)) {
                 Intent intent = new Intent(DetailsActivity.this, NutritionActivity.class);
                 startActivity(intent);
                 finish();
-                break;
             }
         }
+
         return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            switch (category_name) {
-                case "রোগ": {
-                    Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
-                    startActivity(intent);
-                    finish();
-                    break;
-                }
-                case "কীট": {
-                    Intent intent = new Intent(DetailsActivity.this, PestActivity.class);
-                    startActivity(intent);
-                    finish();
-                    break;
-                }
-                case "পুষ্টি দুর্বলতা": {
-                    Intent intent = new Intent(DetailsActivity.this, NutritionActivity.class);
-                    startActivity(intent);
-                    finish();
-                    break;
-                }
+        if (class_id.equals("detect")) {
+            Intent intent = new Intent(DetailsActivity.this, DetectImageActivity.class);
+            startActivity(intent);
+            finish();
+        }else {
+            if ("রোগ".equals(category_name)) {
+                Intent intent = new Intent(DetailsActivity.this, DiseaseActivity.class);
+                startActivity(intent);
+                finish();
+            } else if ("কীট".equals(category_name)) {
+                Intent intent = new Intent(DetailsActivity.this, PestActivity.class);
+                startActivity(intent);
+                finish();
+            } else if ("পুষ্টি দুর্বলতা".equals(category_name)) {
+                Intent intent = new Intent(DetailsActivity.this, NutritionActivity.class);
+                startActivity(intent);
+                finish();
             }
         }
+
         return super.onKeyDown(keyCode, event);
     }
 }
