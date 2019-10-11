@@ -107,7 +107,7 @@ public class DetectImageActivity extends AppCompatActivity {
                 Thread.currentThread().interrupt();
             }
 
-            diseaseName = "লিফ স্কোল্ড";
+            diseaseName = "ধানের পাতা ব্লাস্ট";
             category = "রোগ";
 
             layout.setVisibility(View.VISIBLE);
