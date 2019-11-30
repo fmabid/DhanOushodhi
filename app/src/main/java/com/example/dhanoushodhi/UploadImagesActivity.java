@@ -177,17 +177,20 @@ public class UploadImagesActivity extends AppCompatActivity {
     private void uploadImage() {
 
         if (mArrayUri != null) {
-            final ProgressDialog progressDialog = new ProgressDialog(this);
-            progressDialog.setTitle("আপলোড হচ্ছে...");
-            progressDialog.show();
+
+
 
             for (int i = 0; i < mArrayUri.size(); i++) {
+                final ProgressDialog progressDialog = new ProgressDialog(this);
+                progressDialog.setTitle("আপলোড হচ্ছে...");
+                progressDialog.show();
+
                 StorageReference ref = storageReference.child(category_name + "/" + disease + "/" + mArrayUri.get(i).getPath().replace("document/", ""));
                 ref.putFile(mArrayUri.get(i)).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         progressDialog.dismiss();
-                        Toast.makeText(UploadImagesActivity.this, "আপলোড হয়েছে ", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(UploadImagesActivity.this, "আপলোড হয়েছে.. ", Toast.LENGTH_SHORT).show();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -201,7 +204,7 @@ public class UploadImagesActivity extends AppCompatActivity {
                     public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
                         double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot
                                 .getTotalByteCount());
-                        progressDialog.setMessage("আপলোড হয়েছে " + (int) progress + "%");
+                        progressDialog.setMessage("আপলোড হয়েছে. " + (int) progress + "%");
                     }
                 });
             }
