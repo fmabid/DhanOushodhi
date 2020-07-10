@@ -9,5 +9,5 @@ Minimum version required to run: Android 6
 * **Ummea Sarah Ali**
 * **Laila Sultana**
 * **Abdullah Al Noman**
-* **Tashin Ahmed**
-* **Md. Faysal Mahmud Abid**
+* **[Tashin Ahmed](https://tashinahmed.github.io/)**
+* **[Md. Faysal Mahmud Abid](https://fmabid.github.io/)**
