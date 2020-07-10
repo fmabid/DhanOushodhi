@@ -6,8 +6,8 @@ Minimum version required to run: Android 6
 
 ## Team members
 
-* **Ummea Sarah Ali**
-* **Laila Sultana**
-* **Abdullah Al Noman**
+* **[Ummea Sarah Ali](linkedin.com/in/sarah-twinkle-53520b191)**
+* **[Laila Sultana](https://www.linkedin.com/in/laila-sultana-1915a9197/)**
+* **[Abdullah Al Noman]()**
 * **[Tashin Ahmed](https://tashinahmed.github.io/)**
 * **[Md. Faysal Mahmud Abid](https://fmabid.github.io/)**
