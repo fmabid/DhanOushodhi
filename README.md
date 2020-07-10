@@ -1,5 +1,5 @@
 # DhanOushodhi
-This was our final year project. This application is for showing output of our Rise disease ditection ML model.
+This was our final year project. This application is for showing output of our Rice disease ditection ML model.
 
 Minimum version required to run: Android 6
 
