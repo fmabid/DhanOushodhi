@@ -1,5 +1,5 @@
 # DhanOushodhi - ধান ঔষধি
-This was our final year project. This application is for showing output of our Rice disease ditection ML model.
+This was our Final Year Design Project (FYDP), 2019. This application is for showing output of our ML model for Rice disease detection.
 
 Minimum version required to run: Android 6
 
